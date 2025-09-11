@@ -34,4 +34,6 @@ jobs:
         run: |
           echo "PWD is $(pwd)"
           ls -lR .
+          echo "Recursively list home dir"
+          ls -lR $HOME
 

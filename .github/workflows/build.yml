@@ -25,7 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a set of commands using the runners shell
       - name: List PWD
         run: |
           echo "PWD is $(pwd)"
@@ -42,6 +41,9 @@ jobs:
       #     driver-opts: namespace=arc-runners
       #     install: true
 
+      - name: List Builders
+        run: docker buildx ls
+      
       - name: Build Docker Image
         uses: docker/build-push-action@v6.18.0
         with:

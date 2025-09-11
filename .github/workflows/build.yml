@@ -33,7 +33,7 @@ jobs:
           echo "Do I have Docker?"
           docker version || echo No Docker installed
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.11
-        with:
-          driver: kubernetes
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v3.11.1
+      #   with:
+      #     driver: kubernetes

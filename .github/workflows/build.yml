@@ -32,11 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo What do we have in pwd?
-          echo PWD="${PWD}"
-          ls -l
-          echo What do we have in root?
-          ls -l /
-          echo What do we have (recursively) in /home?
-          ls -lR /home
-          
+          echo "PWD=$(pwd)"
+          ls -lR .
+

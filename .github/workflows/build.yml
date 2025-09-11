@@ -39,6 +39,6 @@ jobs:
         with:
           name: arc-demo
           driver: kubernetes
-          driver-opts: namespace=buildkit
+          driver-opts: namespace=arc-runners
           install: true
-          
+

@@ -1,3 +1,3 @@
 FROM alpine
 
-RUN sleep 10m
+CMD [ "sleep", "10m" ]

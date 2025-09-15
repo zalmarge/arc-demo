@@ -21,8 +21,8 @@ jobs:
     runs-on: arc-runner-set
 
     container:
-      # image: docker:28.4-cli
-      image: ghcr.io/actions/actions-runner:latest
+      image: docker:28.4-cli
+      # image: ghcr.io/actions/actions-runner:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -45,11 +45,11 @@ jobs:
       #     driver-opts: namespace=arc-runners
       #     install: true
 
-      - name: List Builders
-        run: docker buildx ls
+      # - name: List Builders
+      #   run: docker buildx ls
       
-      - name: Build Docker Image
-        uses: docker/build-push-action@v6.18.0
-        with:
-          builder: arc-demo
-          tags: arc-demo
+      # - name: Build Docker Image
+      #   uses: docker/build-push-action@v6.18.0
+      #   with:
+      #     builder: arc-demo
+      #     tags: arc-demo

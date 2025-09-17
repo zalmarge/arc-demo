@@ -43,7 +43,7 @@ jobs:
           name: arc-demo
           node: buildkitd
           driver: kubernetes
-          driver-opts: namespace=buildkit
+          driver-opts: namespace=arc-runners
 
       # - name: List Builders
       #   run: docker buildx ls

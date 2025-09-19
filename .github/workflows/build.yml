@@ -47,8 +47,8 @@ jobs:
       - name: List Builders
         run: docker buildx ls
       
-      # - name: Build Docker Image
-      #   uses: docker/build-push-action@v6.18.0
-      #   with:
-      #     builder: arc-demo
-      #     tags: arc-demo
+      - name: Build Docker Image
+        uses: docker/build-push-action@v6.18.0
+        with:
+          builder: arc-demo
+          tags: arc-demo

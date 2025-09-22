@@ -52,7 +52,7 @@ jobs:
           name: foo
           driver: kubernetes
           driver-opts: namespace=arc-runners
-          endpoint: kubernetes:///foo?deployment=foo&kubeconfig=
+          endpoint: kubernetes:///foo
 
           # /usr/local/bin/docker buildx create --name foo --driver kubernetes --driver-opt namespace=arc-runners,buildkit-root-volume-memory=2G --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
           # /usr/local/bin/docker buildx create --name builder-17968362-9b89-4d08-8787-255419bc2208 --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use kubernetes:///foo?deployment=buildkit-186b4fbc-fc46-483d-a4b9-c7360557844d-af8ac&kubeconfig=

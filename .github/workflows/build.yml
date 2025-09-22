@@ -45,7 +45,7 @@ jobs:
           # driver-opts: namespace=arc-runners
           name: foo
           driver: kubernetes
-          driver-opts: namespace=arc-runners
+          driver-opts: namespace=arc-runners,buildkit-root-folder-memory=2G
           cleanup: false
 
       - name: List Builders

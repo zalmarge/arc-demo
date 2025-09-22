@@ -43,9 +43,11 @@ jobs:
           # name: arc-demo
           # driver: kubernetes
           # driver-opts: namespace=arc-runners
-          name: buildkitd
-          driver: kubernetes
-          driver-opts: namespace=arc-runners
+          # This creates yet another builder
+          # name: buildkitd
+          # driver: kubernetes
+          # driver-opts: namespace=arc-runners
+          endpoint: buildkitd
 
       - name: List Builders
         run: docker buildx ls

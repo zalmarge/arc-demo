@@ -46,6 +46,7 @@ jobs:
           name: foo
           driver: kubernetes
           driver-opts: namespace=arc-runners
+          cleanup: false
 
       - name: List Builders
         run: docker buildx ls

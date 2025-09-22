@@ -32,7 +32,7 @@ jobs:
       - name: List PWD
         run: |
           echo "PWD is $(pwd)"
-          ls -lR .
+          ls -lA .
 
       # - name: What Docker do I have?
       #   run: docker version

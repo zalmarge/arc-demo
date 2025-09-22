@@ -48,7 +48,7 @@ jobs:
           # driver: kubernetes
           # driver-opts: namespace=arc-runners,buildkit-root-volume-memory=2G
           # cleanup: false
-
+          name: foo
           endpoint: kubernetes:///foo?deployment=buildkit-186b4fbc-fc46-483d-a4b9-c7360557844d-af8ac&kubeconfig=
 
       - name: List Builders

@@ -53,5 +53,7 @@ jobs:
       - name: Build Docker Image
         uses: docker/build-push-action@v6.18.0
         with:
-          builder: arc-demo
-          tags: arc-demo
+          # builder: arc-demo
+          # tags: arc-demo
+          builder: buildkitd
+          tags: pre-created

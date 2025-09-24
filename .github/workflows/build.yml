@@ -34,9 +34,6 @@ jobs:
           echo "PWD is $(pwd)"
           ls -lA .
 
-      # - name: What Docker do I have?
-      #   run: docker version
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.11.1
         with:
@@ -44,26 +41,16 @@ jobs:
           # driver: kubernetes
           # driver-opts: namespace=arc-runners
 
-          # name: foo
-          # driver: kubernetes
-          # driver-opts: namespace=arc-runners,buildkit-root-volume-memory=2G
-          # cleanup: false
-
           name: foo
           driver: kubernetes
-          driver-opts: namespace=arc-runners
-          endpoint: kubernetes:///
+          driver-opts: namespace=arc-runners,buildkit-root-volume-memory=2G
+          # cleanup: false
 
-          # /usr/local/bin/docker buildx create --name foo --driver kubernetes --driver-opt namespace=arc-runners,buildkit-root-volume-memory=2G --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
-          # /usr/local/bin/docker buildx create --name builder-17968362-9b89-4d08-8787-255419bc2208 --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use kubernetes:///foo?deployment=buildkit-186b4fbc-fc46-483d-a4b9-c7360557844d-af8ac&kubeconfig=
-          # /usr/local/bin/docker buildx create --name foo --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use kubernetes:///foo?deployment=buildkit-186b4fbc-fc46-483d-a4b9-c7360557844d-af8ac&kubeconfig=
       - name: List Builders
         run: docker buildx ls
       
       - name: Build Docker Image
         uses: docker/build-push-action@v6.18.0
         with:
-          # builder: arc-demo
-          # tags: arc-demo
-          builder: foo
-          tags: pre-created
+          builder: arc-demo
+          tags: arc-demo

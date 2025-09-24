@@ -20,9 +20,9 @@ jobs:
     # The type of runner that the job will run on
     runs-on: arc-runner-set
 
-    # container:
+    container:
     #   image: docker:28.4-cli
-    #   image: ghcr.io/actions/actions-runner:latest
+      image: ghcr.io/actions/actions-runner:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

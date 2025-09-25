@@ -37,10 +37,13 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.11.1
         with:
+          # name: arc-demo
+          # driver: kubernetes
+          # driver-opts: namespace=arc-runners
+          # # cleanup: false
           name: arc-demo
-          driver: kubernetes
-          driver-opts: namespace=arc-runners
-          # cleanup: false
+          driver: remote
+          driver-opts: tcp://buildkitd.buildkit.svc:1234
 
       - name: List Builders
         run: docker buildx ls

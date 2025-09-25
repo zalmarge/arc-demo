@@ -43,7 +43,7 @@ jobs:
           # # cleanup: false
           name: arc-demo
           driver: remote
-          driver-opts: tcp://buildkitd.buildkit.svc:1234
+          endpoint: tcp://buildkitd.buildkit.svc:1234
 
       - name: List Builders
         run: docker buildx ls
